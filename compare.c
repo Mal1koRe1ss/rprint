@@ -18,12 +18,12 @@ int main(void){
 	printf("Testing with %d iterations each...\n\n", iterations);
 
 	start = get_nanosec();
-	for (int i = 0; i < iterations; i++) { printf("Test %d: %s\n", i, "Hello World"); }
+	for (int i = 0; i < iterations; i++) { printf("Test %d: %s %%\n", i, "Hello World"); }
 	end = get_nanosec();
 	std_time = (double)(end - start) / 1000000000.0;
 
 	start = get_nanosec();
-	for (int i = 0;i < iterations; i++) { rprint("Test %d: %s\n", i, "Hello World"); }
+	for (int i = 0;i < iterations; i++) { rprint("Test %d: %s %%\n", i, "Hello World"); }
 	end = get_nanosec();
 	rprint_time = (double)(end - start) / 1000000000.0;
 
@@ -31,6 +31,4 @@ int main(void){
 	printf("Standard printf: %.6f seconds (%.2f ns/call)\n", std_time, (std_time * 1000000000.0) / iterations);
 	printf("Custom printf: %.6f seconds (%.2f ns/call)\n", rprint_time, (rprint_time * 1000000000.0) / iterations);
 
-	double ratio = rprint_time / std_time;
-	printf("Custom is %.2fx %s than standard printf\n", ratio, ratio < 1.0 ? "faster" : "slower");
 } 

@@ -17,9 +17,12 @@ Secondly i wanted to test something, is **printf** the best ?<br>
 
 I tried to run it on tty too... But the performance wasn't stable.
 
-The lowest i saw was 0.78x but i didn't captured it.<br>
-This is the lowest one i captured 0.80x
-```
-Standard printf: 0.199075 seconds (1990.75 ns/call)
-Custom printf: 0.158590 seconds (1585.90 ns/call)
-```
+Approximately rprint is 1.257 times faster than printf. (10 Tests)
+
+
+# End
+
+I don't really know if i'm going to develop this project.<br>
+I did it cuz it came to my mind and it's fun...<br>
+So... yeah you can check the code, and learn some things.<br>
+Maybe i will develop this project in the future...<br>
